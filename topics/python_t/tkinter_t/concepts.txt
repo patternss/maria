@@ -1,0 +1,7 @@
+tkinter | GUI-toolkit in python standard library ("toolkit interface") # 0.01
+widget | Basic component of tkinter. Widgets are objects in the GUI, such as text label, input-box, button. # 0.01
+geometry management | In tkinter, determines how the widgets are arranged in the window.
+main window | A windows where all the widgets are placed into. # 0.01
+
+
+

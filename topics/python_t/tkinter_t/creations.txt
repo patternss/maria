@@ -1,0 +1,1 @@
+Create a main window in tk | Add a headline and a size for the window |  Run it
