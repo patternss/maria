@@ -1,30 +1,26 @@
 #Command line interface for Maria
 
-import sys
 from problem import Problem
+from maria import Maria
 
 #initialization 
-# data structure for storing the problems
-problems = []
-
-# load information
-file_path = 'problems.txt'
-with open(file_path, 'r') as file:
-    lines = file.readlines()
-
-# import the problems into the problems data structure
-for line in lines:
-    prob_components = line.split('|')
-    new_problem = Problem(prob_components[0], prob_components[1])
-    problems.append(new_problem)
-
-
+maria_1 = Maria('problems.txt')
 
 #command line loop
 cmnd = ''
 quit_cmnds = ['quit', 'q', 'exit'] 
 while cmnd not in quit_cmnds:
-    match cmnd:
-        case 
+   cmnd = input('>>>')
+   match cmnd:
+        case 'c': #create a new problem
+            description = input('Input the description for the problem:\n>>>')
+            thing = input('Input the thing (entity, object, article, phenomenon, pattern):\n>>>')
+            topic = input('Input the topic for the new problem:\n>>>')
+
+            maria_1.create_problem(topic, description, thing )
+            
+        case 'p': #present the user with a new problem
+            problem = maria_1.present_problem()
+            print(problem.description)
 
 #exit
