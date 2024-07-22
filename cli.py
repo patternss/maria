@@ -1,4 +1,4 @@
-#Command line version of Maria
+#Command line interface for Maria
 
 import sys
 from problem import Problem
