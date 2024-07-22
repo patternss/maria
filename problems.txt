@@ -1,0 +1,2 @@
+How do you enter insert mode in Vim? | By pressing 'i', 'a' or 'o', where 'i' ables you to insert text before what is under the cursor, 'a' after that and 'o' to a new line.
+How do you leave insert mode in Vim | By pressing Esc.
