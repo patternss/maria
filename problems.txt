@@ -1,3 +1,3 @@
 1|Vim|How do you enter insert mode in Vim?|By pressing 'i', 'a' or 'o', where 'i' ables you to insert text before what is under the cursor, 'a' after that and 'o' to a new line.
 2|Vim|How do you leave insert mode in Vim|By pressing Esc.
-3|Vim|A way to go to a line by line number in Vim|type ":xx" where xx is line number. Hit enter.
+3|Vim|A way to go to a line by line number in Vim|type ":xx" where xx is line number. Hit enter.4|programming|Name for a structure that chooses the way the program will continue towards|Control flow structure or conditional control flow5|python|possible ways to create control flow structures in python|if-elif-else chain, pattern matching (match-case), function mapping (e.g. function dictionary), inherited classes through calling the same method, using tools from argparse library.

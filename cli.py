@@ -22,5 +22,18 @@ while cmnd not in quit_cmnds:
         case 'p': #present the user with a new problem
             problem = maria_1.present_problem()
             print(problem.description)
+        
+        
+       # case 't': #choose a topic for presented problems
+         #   topic = input('Input topic name (empty or "all" will include all topics):\n>>>')
+          #  if maria_1.set_topic(topic):
+           #     print(f'Topic was set to topic)
+        
+
+        case 'h': #show possible commands to the user
+            print('Available actions:\nc: create a new problem\np: present a problem\nq, quit, exit: exit the learning session')
+        
+        case _:
+            print('Unknown command, please try again or type "h" to see help with commands')
 
 #exit
