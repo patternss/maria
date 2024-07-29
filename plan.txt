@@ -1,0 +1,8 @@
+Tasks:
+	- update problem class
+	- create json-database
+	- re-create the cli based on a command-function dict
+		- check input for errors
+		- rate answers
+	- database functionality
+		- update prominance score
