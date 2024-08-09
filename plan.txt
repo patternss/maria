@@ -1,8 +1,10 @@
 Tasks:
-	- update problem class
-	- create json-database
+	- finnish Maria create command (and other commands?)
+		- add two way problems
+		- add prominance calculation for problems
 	- re-create the cli based on a command-function dict
+		- parameters for commands
 		- check input for errors
 		- rate answers
-	- database functionality
-		- update prominance score
+	
+	- add utils dir, log dir 
