@@ -1,0 +1,73 @@
+{
+    "col_name": "default",
+    "problems": {
+        "0": {
+            "id": 0,
+            "pat_1": {
+                "content": "using kwargs in a function",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "function(**dict_name)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": "python",
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": []
+        },
+        "1": {
+            "id": 1,
+            "pat_1": {
+                "content": "how to create a variable and assign number 2 into it?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "var_name = 2",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": "python",
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": []
+        },
+        "2": {
+            "id": 2,
+            "pat_1": {
+                "content": "using args as function parameters",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "func(*args)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": "python ",
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": []
+        },
+        "3": {
+            "id": 3,
+            "pat_1": {
+                "content": "F = ma",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "/abort",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": "simplified formula for Newton's 2nd law",
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": []
+        }
+    }
+}

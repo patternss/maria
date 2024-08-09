@@ -14,16 +14,16 @@ import datetime
 from pattern import Pattern
 
 class Problem():
-    def __init__(self, prob_id, topics, pat_1, pat_2, mastery_lvl=0,\
+    def __init__(self, prob_id, topics, pat_1, pat_2, mast_lvl=0,\
             ratings=[], answ_hist=[], time_answ_cor=0):
         self.id = prob_id 
         self.pat_1 = pat_1
         self.pat_2 = pat_2
         self.topics = topics
-        self.mastery_lvl = mastery_lvl
+        self.mast_lvl = mast_lvl
         self.ratings = ratings
         self.answ_hist = answ_hist
-        self.time_answ_cor = time_answ_cor
+        self.time_answ_cor = time_answ_cor #!!!replace with function??
         self.prominance = self.calc_prominance()
 
     #calculates time between the last time the problem was solved correctly
@@ -32,8 +32,8 @@ class Problem():
         return datetime.datetime.now() - self.time_answ_cor /3600
    
     def calc_prominance(self):
-        self.prominance = min(1, self.time_answ_cor/(1+5**self.mastery_lvl))
+        self.prominance = min(1, self.time_answ_cor/(1+5**self.mast_lvl))
 
-    def calc_mastery_lvl(self):
+    def calc_mast_lvl(self):
         if 1 not in ratings[-5:]: #last 5 answers were correct
-            self.mastery_lvl += 1
+            self.mast_lvl += 1

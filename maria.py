@@ -33,6 +33,9 @@ or type "help" for more information''')
             else:
                 self.commands[command]()
             if command == 'quit':
+                #save currently used collection to database
+                self.collection.close_collection()
+                
                 break
 
     #takes input for a new problem and passes it to database(s)
@@ -40,6 +43,9 @@ or type "help" for more information''')
         topics = self.UI.ask_input('Please provide topics for the problem.')
         pat_1 = self.UI.ask_input('Provide the first pattern:')
         pat_2 = self.UI.ask_input('Provide the second pattern:')
+
+        pat_1 = Pattern(pat_1)
+        pat_2 = Pattern(pat_2)
 
         self.collection.add_problem(topics, pat_1, pat_2)
 
@@ -95,7 +101,7 @@ or type "help" for more information''')
     
     #add new topic groups to the active_topic_groups:
     def add_topic_groups(topic_groups):
-
+        pass
 
     #remove excisting topic groups from the active topic groups
     def remove_topic_groups(topic_groups):
@@ -103,7 +109,7 @@ or type "help" for more information''')
 
     #clear all topics from the active_topic_groups
     def clear_topics():
-
+        pass
     #closes the session and calls collection to save its data
     def shutdown(self):
         self.UI.provide_output('Goodbye!')
