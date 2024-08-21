@@ -4,70 +4,62 @@
         "0": {
             "id": 0,
             "pat_1": {
-                "content": "using kwargs in a function",
+                "content": "asdf",
                 "pat_type": null,
                 "media": "text"
             },
             "pat_2": {
-                "content": "function(**dict_name)",
+                "content": "zxcv",
                 "pat_type": null,
                 "media": "text"
             },
-            "topics": "python",
+            "topics": "qwer",
             "mast_lvl": 0,
-            "ratings": [],
-            "answ_hist": []
+            "ratings": [
+                1,
+                0,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-20T13:41:59.493234"
         },
         "1": {
             "id": 1,
             "pat_1": {
-                "content": "how to create a variable and assign number 2 into it?",
+                "content": "a module for creating and handling sub-processes within a python file. Can be used for example to execute commands in terminal, in a seperate process. os is not the wanted answer here.",
                 "pat_type": null,
                 "media": "text"
             },
             "pat_2": {
-                "content": "var_name = 2",
+                "content": "subprocess.py",
                 "pat_type": null,
                 "media": "text"
             },
-            "topics": "python",
+            "topics": "python subprocess",
             "mast_lvl": 0,
-            "ratings": [],
-            "answ_hist": []
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-20T13:48:49.244662"
         },
         "2": {
             "id": 2,
             "pat_1": {
-                "content": "using args as function parameters",
+                "content": "way of saving a sequence of bytes into a variable in python",
                 "pat_type": null,
                 "media": "text"
             },
             "pat_2": {
-                "content": "func(*args)",
+                "content": "bytes = b'<byte info here>'",
                 "pat_type": null,
                 "media": "text"
             },
             "topics": "python ",
             "mast_lvl": 0,
             "ratings": [],
-            "answ_hist": []
-        },
-        "3": {
-            "id": 3,
-            "pat_1": {
-                "content": "F = ma",
-                "pat_type": null,
-                "media": "text"
-            },
-            "pat_2": {
-                "content": "/abort",
-                "pat_type": null,
-                "media": "text"
-            },
-            "topics": "simplified formula for Newton's 2nd law",
-            "mast_lvl": 0,
-            "ratings": [],
-            "answ_hist": []
+            "answ_hist": [],
+            "time_answ_cor": null
         }
     }
 }
