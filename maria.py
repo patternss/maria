@@ -46,7 +46,8 @@ or type "help" for more information''')
     #when inverse is True, another problem is also created 
     #swiching the order of the patterns
     def create_problem(self, inverse=True): 
-        topics = self.UI.ask_input('Please provide topics for the problem.')
+        topics = self.UI.ask_input('Please provide topics for\
+                the problem.').split()
         pat_1 = self.UI.ask_input('Provide the first pattern:')
         pat_2 = self.UI.ask_input('Provide the second pattern:')
 
@@ -75,17 +76,16 @@ or type "help" for more information''')
         if not self.act_problems:
 
             #filtering func for choosing which problems are chosen from a collection
-            def prob_filter(probs, count = 1, min_prom = 1):
+            def prob_filter(probs, count = 3, min_prom = 1):
                 selected = heapq.nlargest(count, probs.values(),\
                         key=lambda prob: prob.prominance) #nlargest returns n or the
                                                             #max number found
                 #return problems that are above a minimum prominance value 
-                return [prob for prob in probs.values() if prob.prominance > min_prom]
+                return [prob for prob in selected if prob.prominance > min_prom]
 
             #get problems from dictionary 
             self.act_problems = self.collection.get_problems(self.act_topic_groups,\
                     prob_filter)
-            
 
             #if no matching problems were found:
             if not self.act_problems:
@@ -96,11 +96,11 @@ or type "help" for more information''')
         #choose which problem to present next:
         prob = self.act_problems.pop(0)
         #send the problem to the user
-        self.UI.provide_output(f'''Here is a problem for you:\n\n \
-{prob.pat_1.content}\n''')
+        self.UI.provide_output(f'Problem id: {prob.prob_id} -\
+ Topics: {", ".join(prob.topics)}\n\n{prob.pat_1.content}\n')
 
         #ask for an answer
-        answ = self.UI.ask_input("Give your answer (or hit enter if not feasible")
+        answ = self.UI.ask_input("Give your answer or hit 'enter'.")
         self.UI.provide_output(f'Here is the matching pattern:\n\n {prob.pat_2.content}\n')
 
         #ask for problem rating

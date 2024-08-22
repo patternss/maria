@@ -1,12 +1,11 @@
-#problem.py - module that implements the Problem class. The problem concists
+#problem.py - module that implements the Problem class. 
 #Every problem has a unique id that does not change. A problem can be part of 
 #multiple topics. Mastery level tells how 
 #well the user has mastered the problem and influences how frequently the 
 #question is asked from the user. Ratings keep track of right(1) and wrong(0) answers
 #answer history keeps track of answers and the time of an answer. Time from last
-#correct answer is also followed. Promenance is priority value for the problem, 
-#that influences how likely the problem will be presented to the user. It can have
-#values between 0-1.
+#correct answer is also followed. Prominance is priority value for the problem, 
+#that influences how likely the problem will be presented to the user.
 
 from math import log
 import datetime
@@ -16,7 +15,7 @@ from pattern import Pattern
 class Problem():
     def __init__(self, prob_id, topics, pat_1, pat_2, mast_lvl=0,\
             ratings=[], answ_hist=[], time_answ_cor=None):
-        self.id = prob_id 
+        self.prob_id = prob_id 
         self.pat_1 = pat_1
         self.pat_2 = pat_2
         self.topics = topics
@@ -34,7 +33,7 @@ class Problem():
         return (datetime.datetime.now() - self.time_answ_cor).total_seconds() / 86400
    
     def calc_prominance(self): #time(days)²/5^mast_lvl
-        #check if the question has meaningful datetime
+        #if the question has not been answered correctly
         if self.time_answ_cor == None:
             self.prominance = self.MAX_PROMINANCE
             return
@@ -47,10 +46,12 @@ class Problem():
                 * self.time_diff_days()**2/5**self.mast_lvl
 
     def calc_mast_lvl(self):
-        if 1 not in self.ratings[-3:]: #last 3 answers were correct
+        #if atleast three answers and last three are correct:
+        correct = 4 #number of consecutive correct answers before lvl up
+        if len(self.ratings) > 2 and 0 not in self.ratings[-correct:]: 
             self.mast_lvl += 1
-            #problem has been complitely mastered
-            if self.mast_lvl > 9:
+            #if problem has been complitely mastered
+            if self.mast_lvl > 7:
                 self.total_mastery == True
                 
         elif self.ratings[-1] == 0: #last answer was failure

@@ -1,3 +1,0 @@
-1|Vim|How do you enter insert mode in Vim?|By pressing 'i', 'a' or 'o', where 'i' ables you to insert text before what is under the cursor, 'a' after that and 'o' to a new line.
-2|Vim|How do you leave insert mode in Vim|By pressing Esc.
-3|Vim|A way to go to a line by line number in Vim|type ":xx" where xx is line number. Hit enter.

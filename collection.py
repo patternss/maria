@@ -34,7 +34,7 @@ class Collection():
                 }
 
         return {
-                "id" : problem.id,
+                "prob_id" : problem.prob_id,
                 "pat_1" : pat1,
                 "pat_2" : pat2,
                 "topics" : problem.topics,
@@ -47,8 +47,8 @@ class Collection():
 
     #turns the collection object's properties into a dictionary
     def col_to_dict(self):
-        problems_D = {problem_id : self.prob_to_dict(problem)\
-                for problem_id, problem in self.problems.items()}
+        problems_D = {prob_id : self.prob_to_dict(problem)\
+                for prob_id, problem in self.problems.items()}
         return {
             "col_name" : self.name,
             "problems" : problems_D
@@ -63,11 +63,11 @@ class Collection():
                 self.name = col_name
                 for prob_id, data in col_dict['problems'].items():
                     self.add_problem(data["topics"], Pattern(**data["pat_1"]),\
-                            Pattern(**data["pat_2"]), data["id"],\
+                            Pattern(**data["pat_2"]), data["prob_id"],\
                             data["mast_lvl"], data["ratings"], data["answ_hist"],\
                             datetime.datetime.fromisoformat(data["time_answ_cor"]) if \
                                 data["time_answ_cor"] != None else None)
-                    id_counter = data["id"]
+                    id_counter = data["prob_id"]
                 self.top_id = id_counter #update to highest id
             except Exception as e: 
                 print(f'No data could be loaded into the collection. {e}')
@@ -79,14 +79,15 @@ class Collection():
         #create json for topics and problems
         
     def create_backup(self, col_name):
-        pass
+        #get current time in string format
+        cur_time = datetime.datetime.now().strftime("%d-%m-%Y|%H-%M-%S")
 
-        #add topics and topic groups
-        #add problems
+        with open(f'./backups/{col_name}_{cur_time}_col.json', 'w') as json_file:
+            json.dump(self.col_to_dict(), json_file, indent=4)
         
     def close_collection(self):
         #write back_up?
-
+        self.create_backup(self.name)
         #save collection:
         self.save_collection(self.name)
 
@@ -101,7 +102,7 @@ class Collection():
         self.problems[prob_id] = new_prob
     
     def replace_problem(self, problem):
-        self.problems[problem.id] = problem
+        self.problems[problem.prob_id] = problem
     
     #returns all problems from the given topic groups
     def get_problems(self, topic_groups, selection_func):
@@ -109,10 +110,6 @@ class Collection():
 
         self.update_prominances()
 
-        for prob in self.problems.values():
-            print(f'''problem_id: {prob.id} - prominance: {prob.prominance} -\
-                    mastery: {prob.mast_lvl}''')
-                    
         problems = self.problems
         #if all topics are included
         if not topic_groups:
@@ -149,11 +146,13 @@ class Collection():
     #print information about a problem or all the problems if argument
     #is not provided
     def print_prob_info(self, prob_id = None):
-        
+        self.update_prominances() 
+
         probs = self.problems
+        #if a problem id was provided:
         if prob_id != None:
             probs = self.problems[prob_id]
 
         for prob in probs.values():
-            print(f'''problem id: {prob.id} - promenance: {prob.prominance} -\
+            print(f'''problem id: {prob.prob_id} - promenance: {prob.prominance} -\
                     mastery: {prob.mast_lvl}''')

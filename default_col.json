@@ -2,64 +2,284 @@
     "col_name": "default",
     "problems": {
         "0": {
-            "id": 0,
+            "prob_id": 0,
             "pat_1": {
-                "content": "asdf",
+                "content": "way to open a process in background in shell",
                 "pat_type": null,
                 "media": "text"
             },
             "pat_2": {
-                "content": "zxcv",
+                "content": "<process execute command> &",
                 "pat_type": null,
                 "media": "text"
             },
-            "topics": "qwer",
+            "topics": [
+                "linux",
+                "shell"
+            ],
             "mast_lvl": 0,
             "ratings": [
                 1,
-                0,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-20T13:41:59.493234"
+            "time_answ_cor": "2024-08-22T10:33:03.125497"
         },
         "1": {
-            "id": 1,
+            "prob_id": 1,
             "pat_1": {
-                "content": "a module for creating and handling sub-processes within a python file. Can be used for example to execute commands in terminal, in a seperate process. os is not the wanted answer here.",
+                "content": "<process execute command> &",
                 "pat_type": null,
                 "media": "text"
             },
             "pat_2": {
-                "content": "subprocess.py",
+                "content": "way to open a process in background in shell",
                 "pat_type": null,
                 "media": "text"
             },
-            "topics": "python subprocess",
+            "topics": [
+                "linux",
+                "shell"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-22T10:34:07.445692"
+        },
+        "2": {
+            "prob_id": 2,
+            "pat_1": {
+                "content": "way of setting a python program to be idle for n secods using 'time' library",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "time.sleep(n)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python",
+                "time"
+            ],
             "mast_lvl": 0,
             "ratings": [
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-20T13:48:49.244662"
+            "time_answ_cor": "2024-08-21T13:28:03.668564"
         },
-        "2": {
-            "id": 2,
+        "3": {
+            "prob_id": 3,
             "pat_1": {
-                "content": "way of saving a sequence of bytes into a variable in python",
+                "content": "time.sleep(n)",
                 "pat_type": null,
                 "media": "text"
             },
             "pat_2": {
-                "content": "bytes = b'<byte info here>'",
+                "content": "way of setting a python program to be idle for n secods using 'time' library",
                 "pat_type": null,
                 "media": "text"
             },
-            "topics": "python ",
+            "topics": [
+                "python",
+                "time"
+            ],
             "mast_lvl": 0,
-            "ratings": [],
+            "ratings": [
+                1
+            ],
             "answ_hist": [],
-            "time_answ_cor": null
+            "time_answ_cor": "2024-08-21T13:28:37.363941"
+        },
+        "4": {
+            "prob_id": 4,
+            "pat_1": {
+                "content": "see jobs in current terminal (command)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "jobs",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "linux",
+                "terminal",
+                "shell"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-21T13:29:07.646434"
+        },
+        "5": {
+            "prob_id": 5,
+            "pat_1": {
+                "content": "jobs",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "see jobs in current terminal (command)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "linux",
+                "terminal",
+                "shell"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-21T15:48:10.353871"
+        },
+        "6": {
+            "prob_id": 6,
+            "pat_1": {
+                "content": "way to see process information in terminal/shell (task-manager like info)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "with the 'top' and 'htop' commands",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "linux",
+                "shell",
+                "terminal"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-21T15:52:47.005306"
+        },
+        "7": {
+            "prob_id": 7,
+            "pat_1": {
+                "content": "with the 'top' and 'htop' commands",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "way to see process information in terminal/shell (task-manager like info)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "linux",
+                "shell",
+                "terminal"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-22T08:42:39.974129"
+        },
+        "8": {
+            "prob_id": 8,
+            "pat_1": {
+                "content": "way of getting the script name and commandline arguments in python",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "Use sys library: sys.argv[0] for the script name and sys.argv[n] for the n'th argument",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-22T08:44:13.214533"
+        },
+        "9": {
+            "prob_id": 9,
+            "pat_1": {
+                "content": "Use sys library: sys.argv[0] for the script name and sys.argv[n] for the n'th argument",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "way of getting the script name and commandline arguments in python",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-22T10:11:11.016749"
+        },
+        "10": {
+            "prob_id": 10,
+            "pat_1": {
+                "content": "[question] what will happen if you slice using indeces that go past or behid the excisting indeces in a list?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "[answer] slicing in python is forgiving and the interpreter will try to adjust the indsed to produce a smaller slice using indeces that exist.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python",
+                "slicing"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-22T10:25:37.067126"
+        },
+        "11": {
+            "prob_id": 11,
+            "pat_1": {
+                "content": "[answer] slicing in python is forgiving and the interpreter will try to adjust the indsed to produce a smaller slice using indeces that exist.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "[question] what will happen if you slice using indeces that go past or behid the excisting indeces in a list?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python",
+                "slicing"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-22T10:27:07.894619"
         }
     }
 }

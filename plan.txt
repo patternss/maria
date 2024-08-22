@@ -1,10 +1,14 @@
 Tasks:
-	- finnish Maria create command (and other commands?)
-		- add two way problems
-		- add prominance calculation for problems
+	- write the topic functions in collection.py
+	- add features:
+		- delete problem
+		- choose 1 way or 2 way problem
+		- add problem typing and the other thing in problems
+		- possibility to open editor for writing patterns
+		- edit problems
+
 	- re-create the cli based on a command-function dict
 		- parameters for commands
 		- check input for errors
-		- rate answers
 	
 	- add utils dir, log dir 
