@@ -17,38 +17,80 @@ class Maria():
         self.act_problems = []
         self.act_topic_groups = []
         self.commands = {
-                
-                'create' : self.create_problem,
                 'help' : self.help,
-                'problem' : self.provide_problem,  
+                'h'    : self.help,
+                'problem' : self.problem,  
+                'p'       : self.problem,
                 'quit' : self.shutdown,           
-                'pinfo' : self.collection.print_prob_info
-    
+                'q'    : self.shutdown,
             }
 
     #starts a interaction loop with Maria
     def session(self):
         while True:
-            command = self.UI.ask_input('What do you want to do next?')
-            if command not in self.commands.keys():
+            command = self.UI.ask_input('What do you want to do next?').split()
+
+            if command[0] not in self.commands.keys():
                 self.UI.provide_output('''Incorrect input, please try again \
 or type "help" for more information''')
 
             else:
-                self.commands[command]()
-            if command == 'quit':
+                self.commands[command[0]](command)
+            if command[0] in ['quit', 'q']:
                 #save currently used collection to database
                 self.collection.close_collection()
-                
                 break
 
-    def editor_input():
-        pass
+    #prints helpful information about available commands
+    def help(self, command):
+        self.UI.provide_output('''Here are the available commands \n:
+    problem (p): provide a new active problem if such can be found.
+        subcommands for problem:
+            create (c): create a new problem.
+            delete (d): delete problem(s) with given id(s). Ex. p delete 12
+            edit   (e): edit an existing problem. Ex. p edit 15  
+
+    help (h): Shows information about the commands
+    quit (q): Quits the current session
+    ''')
+
+    #processed the problem command and its possible arguments
+    def problem(self, command):
+        if len(command) == 1: #only 'problem' or 'p' was given
+            self.provide_problem()
+        
+        else: #additional command arguments: 
+            match command[1].upper():
+                case 'C' | 'CREATE':
+                    self.create_problem()
+
+                case 'D' | 'DELETE':
+                    self.delete_problem(command[2]) #id to be deleted 
+
+                case 'E' | 'EDIT':
+                    self.edit_problem(command[2]) #id of the to be edited problem
+
+                case 'I' | 'INFO':
+                    if len(command) == 2: #no problem id given
+                        prob_info = self.collection.get_problem_info()
+                    else: #problem id given - only one id shoud be passed here
+                        prob_info = self.collection.get_problem_info(int(command[2]))
+                    for piece in prob_info:
+                        self.UI.provide_output(piece)
+
+                case _ :
+                    self.UI.provide_output('Unknown argument for command "create".')
+
+
+
+    #closes the session and calls collection to save its data
+    def shutdown(self, command):
+        self.UI.provide_output('Goodbye!')
 
     #takes input for a new problem and passes it to database(s),
     #when inverse is True, another problem is also created 
     #swiching the order of the patterns
-    def create_problem(self, inverse=False): 
+    def create_problem(self): 
         instructions = {
                 'pat_1': 'Provide the first pattern:', 
                 'pat_2': 'Provide the second pattern:',
@@ -69,15 +111,15 @@ or type "help" for more information''')
             key = keys[index]
             usr_input = self.UI.ask_input(instructions[key])
 
-            if usr_input == 'ABORT':
+            if usr_input.upper() in ['%A', '%ABORT']:
                 return #leave funciton without saving the new pattern
-            elif usr_input =='EDITOR':
+            elif usr_input.upper() in ['%E', '%EDITOR']:
                 usr_input = editor_input() #open editor here
 
 
             inputs[keys[index]] = usr_input
             #if input is "two_way" and if feasible input was given 
-            if not (keys[index] == 'two_way' and inputs[key].capitalize() not in\
+            if not (keys[index] == 'two_way' and inputs[key].upper() not in\
                     ['Y', 'YES', 'N', 'NO']):
                     index += 1
 
@@ -86,22 +128,9 @@ or type "help" for more information''')
         topics = inputs['topics'].split()
 
         self.collection.add_problem(topics, pat_1, pat_2)
-        if inputs['two_way'].capitalize() in ['Y', 'YES']:
+        if inputs['two_way'].upper() in ['Y', 'YES']:
             self.collection.add_problem(topics, pat_2, pat_1)
         
-
-    #prints helpful information about available commands
-    def help(self):
-        self.UI.provide_output('''Here are the available commands:
-        create - Creates a new problem
-        help - Shows information about the commands
-        problem - Ask Maria for a problem to solve
-        quit - Quits the current session
-        topic add|remove|clear - add or remove topic (or topic group)\
-                or clear all topics.
-    ''')
-
-
     #provides a problem to chosen client by fetching new problems if the
     #there are no active problems. defines a prob_filter function that 
     #implements the intelligence to filter wanted problems
@@ -125,7 +154,6 @@ or type "help" for more information''')
             if not self.act_problems:
                 self.UI.provide_output('There are no active problems at the \
 moment. Good job!')
-
                 return 
         
         #choose which problem to present next:
@@ -141,7 +169,7 @@ moment. Good job!')
         #ask for problem rating
         rating = None
         while rating not in ['C','I']:
-            rating = self.UI.ask_input("How did it go? rate the problem - C for correct and I for incorrect").capitalize()
+            rating = self.UI.ask_input("How did it go? rate the problem - C for correct and I for incorrect").upper()
             if rating == 'C':
                 prob.ratings.append(1)
                 prob.time_answ_cor = datetime.datetime.now()
@@ -153,10 +181,16 @@ moment. Good job!')
         self.collection.replace_problem(prob)
     
 
+    def delete_problem(self, prob_id):
+            if self.collection.delete_problem(int(prob_id)):
+                self.UI.provide_output(f'problem {prob_id} deleted.')
+            else:
+                self.UI.provide_output(f"Failed to delete problem with\
+given id ({prob_id}). Id doesn't exist. ")
+
     #updates an excisting problem
-    def update_problem(self, prob_id):
-        pass
-    
+    def edit_problem(self, prob_id):
+        self.UI.provide_output('Edit does not exist yet') 
     
     #add new topic groups to the active_topic_groups:
     def add_topic_groups(topic_groups):
@@ -169,6 +203,4 @@ moment. Good job!')
     #clear all topics from the active_topic_groups
     def clear_topics():
         pass
-    #closes the session and calls collection to save its data
-    def shutdown(self):
-        self.UI.provide_output('Goodbye!')
+

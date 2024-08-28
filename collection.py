@@ -126,10 +126,12 @@ class Collection():
         return copy.deepcopy(selection_func(sorted(matching_problems.items())))
     
     #remove a problem from the collection
-    def delete_problem(self, problem_id):
-
-        del self.problems[prob_id]
-
+    def delete_problem(self, prob_id):
+        try:
+            del self.problems[prob_id]
+            return True
+        except KeyError: 
+            return False
 
     #updates prominance values for problems given in parameters.
     def update_prominances(self, problems = None):
@@ -149,16 +151,19 @@ class Collection():
     def get_topic_group_info(self):
         pass
 
-    #print information about a problem or all the problems if argument
+    #returns information about a problem or all the problems if argument
     #is not provided
-    def print_prob_info(self, prob_id = None):
+    def get_problem_info(self, prob_id = None):
         self.update_prominances() 
 
         probs = self.problems
         #if a problem id was provided:
         if prob_id != None:
-            probs = self.problems[prob_id]
+            #!!!!TRY IF IT CAN BE FOUND
+            probs = {prob_id : self.problems[prob_id]}
 
+        prob_info = []
         for prob in probs.values():
-            print(f'''problem id: {prob.prob_id} - promenance: {prob.prominance} -\
-                    mastery: {prob.mast_lvl}''')
+            prob_info.append(f'''problem id: {prob.prob_id} - promenance:\
+ {prob.prominance} - mastery: {prob.mast_lvl}''')
+        return prob_info
