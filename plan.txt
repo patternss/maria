@@ -1,8 +1,7 @@
 Tasks:
 	- write the topic functions in collection.py
 	- add features:
-		- delete problem
-		- choose 1 way or 2 way problem
+		- delete problem (testing missing)
 		- add problem typing and the other thing in problems
 		- possibility to open editor for writing patterns
 		- edit problems

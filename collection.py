@@ -125,6 +125,12 @@ class Collection():
 
         return copy.deepcopy(selection_func(sorted(matching_problems.items())))
     
+    #remove a problem from the collection
+    def delete_problem(self, problem_id):
+
+        del self.problems[prob_id]
+
+
     #updates prominance values for problems given in parameters.
     def update_prominances(self, problems = None):
         if problems == None:

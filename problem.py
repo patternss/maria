@@ -7,8 +7,8 @@
 #correct answer is also followed. Prominance is priority value for the problem, 
 #that influences how likely the problem will be presented to the user.
 
-from math import log
 import datetime
+import random
 
 from pattern import Pattern
 
@@ -43,7 +43,8 @@ class Problem():
             #if previous answer was false --> increase the prominance
             prev_wrong_mult = 100 if self.ratings[-1] == 0 else 1
             self.prominance = prev_wrong_mult\
-                * self.time_diff_days()**2/5**self.mast_lvl
+                * self.time_diff_days()**2/5**self.mast_lvl +\
+                round(random.uniform(0,0.25)) #add a little bit of randomness
 
     def calc_mast_lvl(self):
         #if atleast three answers and last three are correct:
@@ -54,6 +55,6 @@ class Problem():
             if self.mast_lvl > 7:
                 self.total_mastery == True
                 
+        #if last answer was wrong. Drop mastery level back to 0
         elif self.ratings[-1] == 0: #last answer was failure
-            if self.mast_lvl > 0 :
-                self.mast_lvl -= 1 
+            self.mast_lvl = 0

@@ -42,21 +42,53 @@ or type "help" for more information''')
                 
                 break
 
+    def editor_input():
+        pass
+
     #takes input for a new problem and passes it to database(s),
     #when inverse is True, another problem is also created 
     #swiching the order of the patterns
-    def create_problem(self, inverse=True): 
-        topics = self.UI.ask_input('Please provide topics for\
-                the problem.').split()
-        pat_1 = self.UI.ask_input('Provide the first pattern:')
-        pat_2 = self.UI.ask_input('Provide the second pattern:')
+    def create_problem(self, inverse=False): 
+        instructions = {
+                'pat_1': 'Provide the first pattern:', 
+                'pat_2': 'Provide the second pattern:',
+                'topics':'Please provide topics for the problem',
+                'two_way': 'Do you want to create two-way problems? (y or n)'
+                }
+        inputs = {
+                'pat_1':  None,
+                'pat_2':  None,
+                'topics': None,
+                'two_way':None
+                }
 
-        pat_1 = Pattern(pat_1)
-        pat_2 = Pattern(pat_2)
+        keys = list(inputs.keys())
+        index = 0
+
+        while index < len(keys):
+            key = keys[index]
+            usr_input = self.UI.ask_input(instructions[key])
+
+            if usr_input == 'ABORT':
+                return #leave funciton without saving the new pattern
+            elif usr_input =='EDITOR':
+                usr_input = editor_input() #open editor here
+
+
+            inputs[keys[index]] = usr_input
+            #if input is "two_way" and if feasible input was given 
+            if not (keys[index] == 'two_way' and inputs[key].capitalize() not in\
+                    ['Y', 'YES', 'N', 'NO']):
+                    index += 1
+
+        pat_1 = Pattern(inputs['pat_1'])
+        pat_2 = Pattern(inputs['pat_2'])
+        topics = inputs['topics'].split()
 
         self.collection.add_problem(topics, pat_1, pat_2)
-        if inverse:
+        if inputs['two_way'].capitalize() in ['Y', 'YES']:
             self.collection.add_problem(topics, pat_2, pat_1)
+        
 
     #prints helpful information about available commands
     def help(self):
@@ -70,13 +102,15 @@ or type "help" for more information''')
     ''')
 
 
-    #provides a problem to chosen client
+    #provides a problem to chosen client by fetching new problems if the
+    #there are no active problems. defines a prob_filter function that 
+    #implements the intelligence to filter wanted problems
     def provide_problem(self):
         #if there are no active problems left:
         if not self.act_problems:
 
             #filtering func for choosing which problems are chosen from a collection
-            def prob_filter(probs, count = 3, min_prom = 1):
+            def prob_filter(probs, count = 3, min_prom = 1.15):
                 selected = heapq.nlargest(count, probs.values(),\
                         key=lambda prob: prob.prominance) #nlargest returns n or the
                                                             #max number found
@@ -89,8 +123,9 @@ or type "help" for more information''')
 
             #if no matching problems were found:
             if not self.act_problems:
-                self.UI.provide_output('''No matching problems were found with \
-                        current topic groups. Try changing them or add problems.''')
+                self.UI.provide_output('There are no active problems at the \
+moment. Good job!')
+
                 return 
         
         #choose which problem to present next:

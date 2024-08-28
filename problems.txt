@@ -1,3 +1,19 @@
 1|Vim|How do you enter insert mode in Vim?|By pressing 'i', 'a' or 'o', where 'i' ables you to insert text before what is under the cursor, 'a' after that and 'o' to a new line.
 2|Vim|How do you leave insert mode in Vim|By pressing Esc.
-3|Vim|A way to go to a line by line number in Vim|type ":xx" where xx is line number. Hit enter.4|programming|Name for a structure that chooses the way the program will continue towards|Control flow structure or conditional control flow5|python|possible ways to create control flow structures in python|if-elif-else chain, pattern matching (match-case), function mapping (e.g. function dictionary), inherited classes through calling the same method, using tools from argparse library.
+3|Vim|A way to go to a line by line number in Vim|type ":xx" where xx is line number. Hit enter.
+4|programming|Name for a structure that chooses the way the program will continue towards|Control flow structure or conditional control flow
+5|python|possible ways to create control flow structures in python|if-elif-else chain, pattern matching (match-case), function mapping (e.g. function dictionary), inherited classes through calling the same method, using tools from argparse library.
+6|cyber security|description of GPG|An encrypt-decrypt program. The name comes from GNU Privacy Guard.
+6|GPG|encrypting and decrypting a file with GPG (commands and other actions)|To encrypt: gpg -c filename. Then remove the original file. To decrypt: gpg filename.gpg
+7|linux|suspend linux from terminal|write systemctl suspend
+8|python|different levels of scopes in python|LEGB rule: local (within function, or lambda), enclosing (local scope of enclosing functions), global, built-in
+9|python|way to access global and non-local variables in python|global varname, nonlocal varname
+10|python|a way to get the local and global variables in python|locals() and globals() give a dictionary where the variables are. There are a bunch of other python variables too in the dictionaries.
+11|python json|library used for reading and writing json in python|json
+12|json|two data structures used in JSON|objects (unordered name-value pairs) and arrays (ordered collection of values)
+13|json python|code for writing a python object into a json file|json.dump(data, fileobject, indent=4) #indent for pretty-printing
+14|json python|code for loading json data in python|json.load(fileobject)
+15|vim|command to clear search highlighting in vim|:noh
+16|vim|substitute all occurances of a pattern_A with pattern_B|:%s/pattern_A/Pattern_B/g
+17|vim|commands for moving to end of line and to the last non whitespace character in vim|'$' for end of line and 'g_' for last non ws char
+18|vim|commands for moving to beginning of line and first non whitespace character in vim|'0' for beginning and '_' for first non whitespace char

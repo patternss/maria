@@ -17,13 +17,14 @@
                 "linux",
                 "shell"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-22T10:33:03.125497"
+            "time_answ_cor": "2024-08-26T10:42:19.924709"
         },
         "1": {
             "prob_id": 1,
@@ -41,13 +42,14 @@
                 "linux",
                 "shell"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-22T10:34:07.445692"
+            "time_answ_cor": "2024-08-26T10:47:34.829110"
         },
         "2": {
             "prob_id": 2,
@@ -65,12 +67,14 @@
                 "python",
                 "time"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-21T13:28:03.668564"
+            "time_answ_cor": "2024-08-28T06:15:08.040903"
         },
         "3": {
             "prob_id": 3,
@@ -88,12 +92,14 @@
                 "python",
                 "time"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-21T13:28:37.363941"
+            "time_answ_cor": "2024-08-28T06:19:07.044240"
         },
         "4": {
             "prob_id": 4,
@@ -112,12 +118,14 @@
                 "terminal",
                 "shell"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-21T13:29:07.646434"
+            "time_answ_cor": "2024-08-28T06:19:26.394880"
         },
         "5": {
             "prob_id": 5,
@@ -136,12 +144,14 @@
                 "terminal",
                 "shell"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-21T15:48:10.353871"
+            "time_answ_cor": "2024-08-28T06:20:07.522190"
         },
         "6": {
             "prob_id": 6,
@@ -160,12 +170,14 @@
                 "shell",
                 "terminal"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-21T15:52:47.005306"
+            "time_answ_cor": "2024-08-28T06:25:48.928658"
         },
         "7": {
             "prob_id": 7,
@@ -186,10 +198,14 @@
             ],
             "mast_lvl": 0,
             "ratings": [
+                1,
+                1,
+                0,
+                0,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-22T08:42:39.974129"
+            "time_answ_cor": "2024-08-28T06:38:44.683469"
         },
         "8": {
             "prob_id": 8,
@@ -208,10 +224,13 @@
             ],
             "mast_lvl": 0,
             "ratings": [
+                1,
+                1,
+                0,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-22T08:44:13.214533"
+            "time_answ_cor": "2024-08-28T06:36:01.369163"
         },
         "9": {
             "prob_id": 9,
@@ -230,10 +249,13 @@
             ],
             "mast_lvl": 0,
             "ratings": [
+                1,
+                0,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-22T10:11:11.016749"
+            "time_answ_cor": "2024-08-28T06:53:13.910916"
         },
         "10": {
             "prob_id": 10,
@@ -251,12 +273,14 @@
                 "python",
                 "slicing"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-22T10:25:37.067126"
+            "time_answ_cor": "2024-08-28T06:55:05.679270"
         },
         "11": {
             "prob_id": 11,
@@ -274,12 +298,476 @@
                 "python",
                 "slicing"
             ],
+            "mast_lvl": 1,
+            "ratings": [
+                1,
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:58:45.000912"
+        },
+        "12": {
+            "prob_id": 12,
+            "pat_1": {
+                "content": "command for listing environmental variables in a linux shell",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "type to shell: env",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "linux",
+                "shell"
+            ],
+            "mast_lvl": 1,
+            "ratings": [
+                1,
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:59:04.069381"
+        },
+        "13": {
+            "prob_id": 13,
+            "pat_1": {
+                "content": "type to shell: env",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "command for listing environmental variables in a linux shell",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "linux",
+                "shell"
+            ],
+            "mast_lvl": 1,
+            "ratings": [
+                1,
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:59:32.017845"
+        },
+        "14": {
+            "prob_id": 14,
+            "pat_1": {
+                "content": "command for printing the value of an environmental variable in linux shell",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "printenv <variable name>",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "linux",
+                "shell"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:14:16.521460"
+        },
+        "15": {
+            "prob_id": 15,
+            "pat_1": {
+                "content": "printenv <variable name>",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "command for printing the value of an environmental variable in linux shell",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "linux",
+                "shell"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:14:51.295868"
+        },
+        "16": {
+            "prob_id": 16,
+            "pat_1": {
+                "content": "what is a raw string in python and how is it produced in code?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "A raw string is a string that treates '/' as a normal backslash character. Code: raw_str = r\"/n will be shown here as /n not as a line change\"",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:38:16.441780"
+        },
+        "17": {
+            "prob_id": 17,
+            "pat_1": {
+                "content": "A raw string is a string that treates '/' as a normal backslash character. Code: raw_str = r\"/n will be shown here as /n not as a line change\"",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "what is a raw string in python and how is it produced in code?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:39:17.899366"
+        },
+        "18": {
+            "prob_id": 18,
+            "pat_1": {
+                "content": "what is __all__ used for in python? Give an example.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "It holds a list of all the elements that will be imported from that module with from module import *. Example: __all__ = [\"CONST1\", \"CONST2\", \"func1\", \"func2\"]",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                0,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:42:19.238802"
+        },
+        "19": {
+            "prob_id": 19,
+            "pat_1": {
+                "content": "It holds a list of all the elements that will be imported from that module with from module import *. Example: __all__ = [\"CONST1\", \"CONST2\", \"func1\", \"func2\"]",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "what is __all__ used for in python? Give an example.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:43:50.571705"
+        },
+        "20": {
+            "prob_id": 20,
+            "pat_1": {
+                "content": "what is __all__ for in python?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "it is used to list all the arguments that can be imported from a module using from module import *",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:44:11.784484"
+        },
+        "21": {
+            "prob_id": 21,
+            "pat_1": {
+                "content": "explain the * and / in the following function definition: def func1(a, b, /, c, *, d, e,)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "The / tells that the preceding arguments have to be positional (not keyword) and the * tellthat the following arguments (before possible *args and **kwargs have to be keyword arguments",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python",
+                "funciton-definition"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                0,
+                1,
+                0,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:57:44.817357"
+        },
+        "22": {
+            "prob_id": 22,
+            "pat_1": {
+                "content": "In vim how do you add an empty line above the current line?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "shift + o (O)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "vim"
+            ],
             "mast_lvl": 0,
             "ratings": [
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-22T10:27:07.894619"
+            "time_answ_cor": "2024-08-28T06:02:54.863422"
+        },
+        "23": {
+            "prob_id": 23,
+            "pat_1": {
+                "content": "shift + o (O)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "In vim how do you add an empty line above the current line?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "vim"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:03:52.295763"
+        },
+        "24": {
+            "prob_id": 24,
+            "pat_1": {
+                "content": "which one is the right way to write the word: feasable or feasible?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "feasible",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "english",
+                "spelling"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:04:25.545843"
+        },
+        "25": {
+            "prob_id": 25,
+            "pat_1": {
+                "content": "a,b,c = [1,2,3] (explain pattern)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "assigning multiple variables with unpacking (code example)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:06:42.044826"
+        },
+        "26": {
+            "prob_id": 26,
+            "pat_1": {
+                "content": "assigning multiple variables with unpacking (code example)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "a,b,c = [1,2,3] (explain pattern)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:07:01.151268"
+        },
+        "27": {
+            "prob_id": 27,
+            "pat_1": {
+                "content": "(code) [a, _, b] = [1,2,3] --> (description)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "multiple variable assingment using unpacking and a anonymous variable for the second element in the list. _ means that the variable will not be used later. ",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:08:58.276386"
+        },
+        "28": {
+            "prob_id": 28,
+            "pat_1": {
+                "content": "<code> a, *b, c, d = [1,2,3,4,5,6,7,8,9] --> <description>",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "<description> the code assings the first element to a and the two last elements to c and d. All the other elements in the list go to a variable b --> <code>",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:11:56.430398"
+        },
+        "29": {
+            "prob_id": 29,
+            "pat_1": {
+                "content": "<description> the code assings the first element to a and the two last elements to c and d. All the other elements in the list go to a variable b --> <code>",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "<code> a, *b, c, d = [1,2,3,4,5,6,7,8,9] --> <description>",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:12:40.999960"
+        },
+        "30": {
+            "prob_id": 30,
+            "pat_1": {
+                "content": "<task> assing the data in the following data in the variable a into three different variables: a = (1,('first', 'second'))",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "<code> b,(c,d) = a",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:13:48.871407"
+        },
+        "31": {
+            "prob_id": 31,
+            "pat_1": {
+                "content": "(question) which one is the right spelling: indices or indeces?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "indices",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "english",
+                "spelling"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-08-28T06:56:23.361832"
         }
     }
 }
