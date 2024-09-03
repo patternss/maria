@@ -8,6 +8,7 @@ import datetime
 
 from problem import Problem
 from pattern import Pattern
+import utils
 
 class Maria():
 
@@ -16,6 +17,7 @@ class Maria():
         self.UI = UI
         self.act_problems = []
         self.act_topic_groups = []
+        self.min_prominance = 1.15
         self.commands = {
                 'help' : self.help,
                 'h'    : self.help,
@@ -111,10 +113,14 @@ or type "help" for more information''')
             key = keys[index]
             usr_input = self.UI.ask_input(instructions[key])
 
+            #check for abort and editor commands:
             if usr_input.upper() in ['%A', '%ABORT']:
                 return #leave funciton without saving the new pattern
-            elif usr_input.upper() in ['%E', '%EDITOR']:
-                usr_input = editor_input() #open editor here
+            elif any(word for word in usr_input.upper().split() if word\
+                    in ['%E', '%EDIT', '%EDITOR']):
+                usr_input = utils.open_editor(text_data=f'#{instructions[key]}') 
+                usr_input = usr_input.replace(f'#{instructions[key]}', '').strip()
+                print(usr_input)
 
 
             inputs[keys[index]] = usr_input
@@ -149,6 +155,9 @@ or type "help" for more information''')
             #get problems from dictionary 
             self.act_problems = self.collection.get_problems(self.act_topic_groups,\
                     prob_filter)
+            
+            #add some randomnes to the problem order by using shuffle
+            random.shuffle(self.act_problems)
 
             #if no matching problems were found:
             if not self.act_problems:
@@ -158,12 +167,19 @@ moment. Good job!')
         
         #choose which problem to present next:
         prob = self.act_problems.pop(0)
-        #send the problem to the user
-        self.UI.provide_output(f'Problem id: {prob.prob_id} -\
- Topics: {", ".join(prob.topics)}\n\n{prob.pat_1.content}\n')
+        problem_prompt = f'Problem id: {prob.prob_id} -\
+ Topics: {", ".join(prob.topics)}\n\n{prob.pat_1.content}\n' 
 
-        #ask for an answer
+        #send the problem to the user
+        self.UI.provide_output(problem_prompt)
+
+        #ask for an answer:
         answ = self.UI.ask_input("Give your answer or hit 'enter'.")
+        #check if user wants to use editor:
+        if answ.strip().upper() in ['%E', '%EDIT', '%EDITOR']:
+            answ = utils.open_editor(text_data=f'**{problem_prompt}**').replace(\
+                    f'**{problem_prompt}**', '')
+            print(answ)
         self.UI.provide_output(f'Here is the matching pattern:\n\n {prob.pat_2.content}\n')
 
         #ask for problem rating

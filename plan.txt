@@ -1,13 +1,14 @@
 Tasks:
-	- write the topic functions in collection.py
 	- add features:
-		- delete problem (testing missing)
+		- ask to confirm removal of a problem (show the  problem to the user)
+		- add a minimum prominance property to the Maria class
+		- problem info shows the number of active problems 
 		- add problem typing and the other thing in problems
 		- possibility to open editor for writing patterns
 		- edit problems
+		- update help - using %e and %a and editing commands
 
-	- re-create the cli based on a command-function dict
-		- parameters for commands
-		- check input for errors
+	- check input for errors
 	
+	- write the topic functions in collection.py or remove?
 	- add utils dir, log dir 
