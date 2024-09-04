@@ -17,14 +17,16 @@
                 "linux",
                 "shell"
             ],
-            "mast_lvl": 1,
+            "mast_lvl": 3,
             "ratings": [
+                1,
+                1,
                 1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-26T10:42:19.924709"
+            "time_answ_cor": "2024-09-04T09:26:50.070280"
         },
         "1": {
             "prob_id": 1,
@@ -42,14 +44,16 @@
                 "linux",
                 "shell"
             ],
-            "mast_lvl": 1,
+            "mast_lvl": 3,
             "ratings": [
+                1,
+                1,
                 1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-26T10:47:34.829110"
+            "time_answ_cor": "2024-09-04T09:27:18.299793"
         },
         "2": {
             "prob_id": 2,
@@ -67,14 +71,15 @@
                 "python",
                 "time"
             ],
-            "mast_lvl": 1,
+            "mast_lvl": 2,
             "ratings": [
+                1,
                 1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:15:08.040903"
+            "time_answ_cor": "2024-09-02T09:18:18.832479"
         },
         "3": {
             "prob_id": 3,
@@ -92,14 +97,15 @@
                 "python",
                 "time"
             ],
-            "mast_lvl": 1,
+            "mast_lvl": 2,
             "ratings": [
+                1,
                 1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:19:07.044240"
+            "time_answ_cor": "2024-09-02T09:16:52.352935"
         },
         "4": {
             "prob_id": 4,
@@ -122,10 +128,12 @@
             "ratings": [
                 1,
                 1,
+                1,
+                0,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:19:26.394880"
+            "time_answ_cor": "2024-09-02T09:18:07.280519"
         },
         "5": {
             "prob_id": 5,
@@ -144,14 +152,15 @@
                 "terminal",
                 "shell"
             ],
-            "mast_lvl": 1,
+            "mast_lvl": 2,
             "ratings": [
+                1,
                 1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:20:07.522190"
+            "time_answ_cor": "2024-09-02T09:17:54.420905"
         },
         "6": {
             "prob_id": 6,
@@ -170,14 +179,15 @@
                 "shell",
                 "terminal"
             ],
-            "mast_lvl": 1,
+            "mast_lvl": 2,
             "ratings": [
+                1,
                 1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:25:48.928658"
+            "time_answ_cor": "2024-09-02T09:18:36.782774"
         },
         "7": {
             "prob_id": 7,
@@ -196,16 +206,19 @@
                 "shell",
                 "terminal"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
                 1,
                 1,
                 0,
                 0,
+                1,
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:38:44.683469"
+            "time_answ_cor": "2024-09-03T12:41:44.052276"
         },
         "8": {
             "prob_id": 8,
@@ -222,15 +235,18 @@
             "topics": [
                 "python"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
                 1,
                 1,
                 0,
+                1,
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:36:01.369163"
+            "time_answ_cor": "2024-09-03T12:41:23.902425"
         },
         "9": {
             "prob_id": 9,
@@ -247,15 +263,17 @@
             "topics": [
                 "python"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
                 1,
                 0,
                 1,
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:53:13.910916"
+            "time_answ_cor": "2024-09-02T09:12:56.354898"
         },
         "10": {
             "prob_id": 10,
@@ -273,39 +291,15 @@
                 "python",
                 "slicing"
             ],
-            "mast_lvl": 1,
+            "mast_lvl": 2,
             "ratings": [
+                1,
                 1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:55:05.679270"
-        },
-        "11": {
-            "prob_id": 11,
-            "pat_1": {
-                "content": "[answer] slicing in python is forgiving and the interpreter will try to adjust the indsed to produce a smaller slice using indeces that exist.",
-                "pat_type": null,
-                "media": "text"
-            },
-            "pat_2": {
-                "content": "[question] what will happen if you slice using indeces that go past or behid the excisting indeces in a list?",
-                "pat_type": null,
-                "media": "text"
-            },
-            "topics": [
-                "python",
-                "slicing"
-            ],
-            "mast_lvl": 1,
-            "ratings": [
-                1,
-                1,
-                1
-            ],
-            "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:58:45.000912"
+            "time_answ_cor": "2024-09-02T09:20:23.557019"
         },
         "12": {
             "prob_id": 12,
@@ -323,14 +317,15 @@
                 "linux",
                 "shell"
             ],
-            "mast_lvl": 1,
+            "mast_lvl": 2,
             "ratings": [
+                1,
                 1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:59:04.069381"
+            "time_answ_cor": "2024-09-02T09:20:46.812779"
         },
         "13": {
             "prob_id": 13,
@@ -348,14 +343,15 @@
                 "linux",
                 "shell"
             ],
-            "mast_lvl": 1,
+            "mast_lvl": 2,
             "ratings": [
+                1,
                 1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:59:32.017845"
+            "time_answ_cor": "2024-09-02T09:22:08.948763"
         },
         "14": {
             "prob_id": 14,
@@ -373,13 +369,15 @@
                 "linux",
                 "shell"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 2,
             "ratings": [
+                1,
+                1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:14:16.521460"
+            "time_answ_cor": "2024-09-02T09:33:43.032802"
         },
         "15": {
             "prob_id": 15,
@@ -397,13 +395,15 @@
                 "linux",
                 "shell"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 2,
             "ratings": [
+                1,
+                1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:14:51.295868"
+            "time_answ_cor": "2024-09-02T09:21:24.396846"
         },
         "16": {
             "prob_id": 16,
@@ -420,36 +420,15 @@
             "topics": [
                 "python"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 2,
             "ratings": [
+                1,
+                1,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:38:16.441780"
-        },
-        "17": {
-            "prob_id": 17,
-            "pat_1": {
-                "content": "A raw string is a string that treates '/' as a normal backslash character. Code: raw_str = r\"/n will be shown here as /n not as a line change\"",
-                "pat_type": null,
-                "media": "text"
-            },
-            "pat_2": {
-                "content": "what is a raw string in python and how is it produced in code?",
-                "pat_type": null,
-                "media": "text"
-            },
-            "topics": [
-                "python"
-            ],
-            "mast_lvl": 0,
-            "ratings": [
-                1,
-                1
-            ],
-            "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:39:17.899366"
+            "time_answ_cor": "2024-09-02T09:25:54.452174"
         },
         "18": {
             "prob_id": 18,
@@ -470,56 +449,14 @@
             "ratings": [
                 1,
                 0,
-                1
-            ],
-            "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:42:19.238802"
-        },
-        "19": {
-            "prob_id": 19,
-            "pat_1": {
-                "content": "It holds a list of all the elements that will be imported from that module with from module import *. Example: __all__ = [\"CONST1\", \"CONST2\", \"func1\", \"func2\"]",
-                "pat_type": null,
-                "media": "text"
-            },
-            "pat_2": {
-                "content": "what is __all__ used for in python? Give an example.",
-                "pat_type": null,
-                "media": "text"
-            },
-            "topics": [
-                "python"
-            ],
-            "mast_lvl": 0,
-            "ratings": [
+                1,
+                1,
+                0,
                 1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:43:50.571705"
-        },
-        "20": {
-            "prob_id": 20,
-            "pat_1": {
-                "content": "what is __all__ for in python?",
-                "pat_type": null,
-                "media": "text"
-            },
-            "pat_2": {
-                "content": "it is used to list all the arguments that can be imported from a module using from module import *",
-                "pat_type": null,
-                "media": "text"
-            },
-            "topics": [
-                "python"
-            ],
-            "mast_lvl": 0,
-            "ratings": [
-                1,
-                1
-            ],
-            "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:44:11.784484"
+            "time_answ_cor": "2024-09-03T12:47:16.679753"
         },
         "21": {
             "prob_id": 21,
@@ -537,15 +474,18 @@
                 "python",
                 "funciton-definition"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
                 0,
                 1,
                 0,
+                1,
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:57:44.817357"
+            "time_answ_cor": "2024-09-03T13:34:48.116007"
         },
         "22": {
             "prob_id": 22,
@@ -562,12 +502,14 @@
             "topics": [
                 "vim"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:02:54.863422"
+            "time_answ_cor": "2024-09-02T08:59:31.416021"
         },
         "23": {
             "prob_id": 23,
@@ -584,12 +526,14 @@
             "topics": [
                 "vim"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:03:52.295763"
+            "time_answ_cor": "2024-09-02T08:59:57.573421"
         },
         "24": {
             "prob_id": 24,
@@ -607,12 +551,14 @@
                 "english",
                 "spelling"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:04:25.545843"
+            "time_answ_cor": "2024-09-02T09:00:29.161621"
         },
         "25": {
             "prob_id": 25,
@@ -629,12 +575,14 @@
             "topics": [
                 "python"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:06:42.044826"
+            "time_answ_cor": "2024-09-02T09:01:29.149242"
         },
         "26": {
             "prob_id": 26,
@@ -651,12 +599,14 @@
             "topics": [
                 "python"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:07:01.151268"
+            "time_answ_cor": "2024-09-02T09:04:17.422689"
         },
         "27": {
             "prob_id": 27,
@@ -673,12 +623,14 @@
             "topics": [
                 "python"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:08:58.276386"
+            "time_answ_cor": "2024-09-02T09:05:31.014773"
         },
         "28": {
             "prob_id": 28,
@@ -695,12 +647,14 @@
             "topics": [
                 "python"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:11:56.430398"
+            "time_answ_cor": "2024-09-02T09:03:48.998808"
         },
         "29": {
             "prob_id": 29,
@@ -717,12 +671,14 @@
             "topics": [
                 "python"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:12:40.999960"
+            "time_answ_cor": "2024-09-02T09:07:02.653382"
         },
         "30": {
             "prob_id": 30,
@@ -739,12 +695,14 @@
             "topics": [
                 "python"
             ],
-            "mast_lvl": 0,
+            "mast_lvl": 1,
             "ratings": [
+                1,
+                1,
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:13:48.871407"
+            "time_answ_cor": "2024-09-02T09:09:07.407774"
         },
         "31": {
             "prob_id": 31,
@@ -762,12 +720,891 @@
                 "english",
                 "spelling"
             ],
+            "mast_lvl": 1,
+            "ratings": [
+                1,
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-02T09:14:08.235172"
+        },
+        "32": {
+            "prob_id": 32,
+            "pat_1": {
+                "content": "(question) In vim, how do you re-select the previous visual block?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "(command) gv",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "vim"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                0,
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T12:34:23.083255"
+        },
+        "33": {
+            "prob_id": 33,
+            "pat_1": {
+                "content": "what is a good function for printing json data in more readable format in python?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "pprint (prettyprint)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T07:11:01.196536"
+        },
+        "34": {
+            "prob_id": 34,
+            "pat_1": {
+                "content": "what does a defaultdict function do in python and what library is it part of?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "it creates a dictionary that returns a default value if the key is not found (instead of a keyerror). It is part of the collections library.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:26:07.891054"
+        },
+        "35": {
+            "prob_id": 35,
+            "pat_1": {
+                "content": "def_dict = collections.defaultdict(int) -->(description)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "code for creating a default dictionary that returns zero if the key does not e)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T07:14:42.155864"
+        },
+        "36": {
+            "prob_id": 36,
+            "pat_1": {
+                "content": "code for creating a default dictionary that returns zero if the key does not e)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "def_dict = collections.defaultdict(int) -->(description)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T07:15:53.547663"
+        },
+        "37": {
+            "prob_id": 37,
+            "pat_1": {
+                "content": "what is the pickle library used for?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "With pickle library, one can serialize (save as byte code) python objects to a file (dump) or bytes object (dumps) and load it again to a program with load or loads",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                0,
+                0,
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:29:32.146888"
+        },
+        "38": {
+            "prob_id": 38,
+            "pat_1": {
+                "content": "with open('data.pkl', 'wb') as file:",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "    pickle.dump(data, file)creates a pickle dump into 'data.pkl' file with 'data' as the to be dumped object --> (code)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                0,
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:30:58.457283"
+        },
+        "39": {
+            "prob_id": 39,
+            "pat_1": {
+                "content": "    pickle.dump(data, file)creates a pickle dump into 'data.pkl' file with 'data' as the to be dumped object --> (code)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "with open('data.pkl', 'wb') as file:",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                0,
+                0,
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:32:41.063783"
+        },
+        "40": {
+            "prob_id": 40,
+            "pat_1": {
+                "content": "what does 'any' and 'all' functions do?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "the any function checks if at least one of the members of a iterable is true and returns True if that is indeed the case. All is similar, but all the elements have to be true for it to return True",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
             "mast_lvl": 0,
             "ratings": [
                 1
             ],
             "answ_hist": [],
-            "time_answ_cor": "2024-08-28T06:56:23.361832"
+            "time_answ_cor": "2024-09-03T09:44:44.933042"
+        },
+        "41": {
+            "prob_id": 41,
+            "pat_1": {
+                "content": "Explain the following code: enumerate(['simo', 'pekka', 'sami'], start = 3)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "it creates an enumerate object with the following content: [(3, 'simo'), (4, 'pekka'), (5, 'sami')]. So it adds an index in iterative manner to the list's elements. The 'start' parameter tell where to begin the indexing.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                0,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T09:50:34.128675"
+        },
+        "42": {
+            "prob_id": 42,
+            "pat_1": {
+                "content": "How do you quickly get the frequencies of the following list variable: names = ['keith', 'simo', 'ralph', 'simo', 'keith', 'simo']",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "use create a Counter object from the collections module: freqs = collections.Counter(names)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                0,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:38:15.887704"
+        },
+        "43": {
+            "prob_id": 43,
+            "pat_1": {
+                "content": "You have a function named func1. How do you time how long it takes to run that code 10000 times?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "using the timeit library: timeit.timeit(func1, number=10000)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T09:48:46.022464"
+        },
+        "44": {
+            "prob_id": 44,
+            "pat_1": {
+                "content": "write a lambda function that takes a list of numbers and returns the sum of them",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "lambda num_list: sum(num_list)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T09:47:40.914333"
+        },
+        "45": {
+            "prob_id": 45,
+            "pat_1": {
+                "content": "create a list of squared numbers using a list of number (nums), a lambda function and map function",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "squared_nums = list(map(lambda num: num**2, nums))",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T10:02:16.580223"
+        },
+        "46": {
+            "prob_id": 46,
+            "pat_1": {
+                "content": "write python code where using filter function you create a list of numbers that are divisible by 3. Also, write the parameter function as a lambda and use an fictional list called nums",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "filtered_nums = list(filter(lambda num: num % 3 == 0, nums))",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T10:03:34.506120"
+        },
+        "47": {
+            "prob_id": 47,
+            "pat_1": {
+                "content": "differences between sorted() and list.sorted()?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "sorted works on any iterable and returns a new list whereas list.sort works only with a list and sorts the list without creating a new list, that is to say, it transforms the existing list. (EDIT the first patter (list.sorted() to list.sort())",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T10:01:11.334817"
+        },
+        "48": {
+            "prob_id": 48,
+            "pat_1": {
+                "content": "sort a dictionary (values are ints) using sorted function and a lambda function. The dictionary should be sorted by the numbers and in decreasing order",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "sorted_dict = sorted(num_dict.items(), key=lambda pair: pair[1], reverse=True)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python",
+                "sorting"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                0,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T10:25:19.490604"
+        },
+        "49": {
+            "prob_id": 49,
+            "pat_1": {
+                "content": "describe what 'next' function does in python and write an example and of using it with a default value",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "example: next_itm = next(list1, 999). The 'next' function gives the next item from an iterable. If the iterable has been exhausted, then default value is given. Default value is 'StopIteration' exception by default.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T10:23:54.114453"
+        },
+        "50": {
+            "prob_id": 50,
+            "pat_1": {
+                "content": "Explain itertools.chain function and give an example how to use it using 'list1' and 'list2'",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "the chain function can be used to go through a combined list in a lazy manner without the need to create a seperate list that would take up memory. Example: combined = itertools.chain(list1, list2) --- usage: next(combined) --- this will give you the next element of the combined cain",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T10:20:30.093974"
+        },
+        "51": {
+            "prob_id": 51,
+            "pat_1": {
+                "content": "#Provide the first pattern:\nYou have two files: file1.txt and file2.txt.\n\nIn shell, how can the content of file1.txt be appended\nto the file2.txt?\n",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "cat file1.txt >> file2.txt",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "linux",
+                "shell"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T12:34:54.911831"
+        },
+        "52": {
+            "prob_id": 52,
+            "pat_1": {
+                "content": "#Provide the first pattern:\nYou need to remove whitespace from a string in a variable 'long_str'\nHow do you do it?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "longs_str.strip()",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T12:42:41.719220"
+        },
+        "53": {
+            "prob_id": 53,
+            "pat_1": {
+                "content": "How do you remove a substring from a string in python?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "string_2 = string_1.replace('substr', '')",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-03T12:48:12.111018"
+        },
+        "54": {
+            "prob_id": 54,
+            "pat_1": {
+                "content": "instantiation (--> definition)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "the act of creating an object from a class",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "object-oriented-programming"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:22:21.900657"
+        },
+        "55": {
+            "prob_id": 55,
+            "pat_1": {
+                "content": "the act of creating an object from a class",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "instantiation (--> definition)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "object-oriented-programming"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:21:56.802737"
+        },
+        "56": {
+            "prob_id": 56,
+            "pat_1": {
+                "content": "factory (--> defition)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "Factory is a design pattern in OOP, where the instantiation of objects, \nis abstracted away to a factory (class or a function). The idea is to \nmake the instantiation process more simple.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "programming",
+                "design-patterns",
+                "object-oriented-programming"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                0,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:23:49.930054"
+        },
+        "57": {
+            "prob_id": 57,
+            "pat_1": {
+                "content": "What will be assigned to the copy_d variable? A reference to the \noriginal dictionary, a shallow copy of it or a deep copy?\n\nnum_dict = {1:[1,2,3], 2:{[4,5,6]}\ncopy_d = dict(num_dict)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "a shallow copy",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:26:32.100544"
+        },
+        "58": {
+            "prob_id": 58,
+            "pat_1": {
+                "content": "How do you get the inheritance structure of a class? (--> code)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "Class_A.__mro__ (--> description/question)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:42:49.129474"
+        },
+        "59": {
+            "prob_id": 59,
+            "pat_1": {
+                "content": "Class_A.__mro__ (--> description/question)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "How do you get the inheritance structure of a class? (--> code)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python"
+            ],
+            "mast_lvl": 0,
+            "ratings": [
+                1,
+                1
+            ],
+            "answ_hist": [],
+            "time_answ_cor": "2024-09-04T09:43:22.321258"
+        },
+        "60": {
+            "prob_id": 60,
+            "pat_1": {
+                "content": "What is probability?",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "Probability is something involving a some kind of a process with, usually, \nmultiple possbile outcomes. This process is embodies a certain amount of \nunknown for the observer, which produces uncertainty or randomnes in the \nexpected outcomes. Probability quantifies how often we expect each outcome \nto occur if the process were repeated  multitude of times.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "probability",
+                "statistics"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "61": {
+            "prob_id": 61,
+            "pat_1": {
+                "content": "Random variable (--> description)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "A function that maps outcomes to numerical value. Example: X = 0 when 1 is rolled.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "probability",
+                "statistics"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "62": {
+            "prob_id": 62,
+            "pat_1": {
+                "content": "Probability distribution (--> description)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "A probability distribution is the mapping of possible outcomes or \nmore often, the values of a random variable, in some random process \nonto probability values, so that all the probability values of the \ndistribution add up to 1.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "probability",
+                "statistics"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "63": {
+            "prob_id": 63,
+            "pat_1": {
+                "content": "create a dictionary comprehension where the key is an incrementing index starting from 1 and the values are taken from a list of strings (--> code)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "new_dict = {(ind, string) for (ind, string) in enumerate(strings)}",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "python",
+                "dictionary_comprehension"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "64": {
+            "prob_id": 64,
+            "pat_1": {
+                "content": "Explain the following mathematical notion: X: {first, second, third} --> {1,2,3}",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "As a whole, the expression reads as X is a function from set {first, second, third} to the \nset {1,2,3}\n\nThe ':' indicates that the X before it is a function. The {first, second, third} is the domain\nof the function, and the set {1,2,3} is the codomain/image/range of the function. The --> \nindicates that the mapping will happen from the first set to the second one",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "mathematics",
+                "mathematical-language"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "65": {
+            "prob_id": 65,
+            "pat_1": {
+                "content": "joint probability and joint probability distribuition (--> description)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "Joint probability is the probability for two different outcomes \nfrom two different experiments/processes happening. In terms of \nrandom variables it's the probability of getting a certain value \nfrom the first random variable and getting a certain value from \nthe second variable. Let's say there were two processes: a coin \ntoss and a die toss. One could count the joint probability of \ngetting a '4' from the die toss and 'heads' from the coin toss. \n\nThe joint probability distribution would show the probabilities \nfor all the possible combinations of the two experiments. Following \nthe previous example: {(1,heads),(1,tails),(2,heads),(2,tails)...(6,tails)}",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "probability",
+                "statistics",
+                "distributions"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "66": {
+            "prob_id": 66,
+            "pat_1": {
+                "content": "Explain the difference between joint probability distribution and multivariate probability distribution.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "The joint probability distribution is used when the number of random variables \nis two or if the random variables can be thought of being 'specific'. The term \nmultivariate distribution is often used when the random variables are thought \nto be more general in nature. It's a bit fuzzy and one way of thinking about \nit is to consider joint distribution as a subset of multivariate distribution.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "probability",
+                "statistics",
+                "distributions"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "67": {
+            "prob_id": 67,
+            "pat_1": {
+                "content": "explain marginal probability and marginal probability distribution",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "Marginal probability is the probability of a specific outcome occurring for a single random variable, obtained by summing (or integrating, in the case of continuous variables) the joint probabilities over all possible values of the other random variables.\n\nMarginal probability distribution is the probability distribution of a single random variable, derived by summing (or integrating) the joint probabilities across all possible values of the other variables. It maps each possible value of the single random variable to its corresponding marginal probability.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "probability",
+                "statistics",
+                "distributions"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "68": {
+            "prob_id": 68,
+            "pat_1": {
+                "content": "Explain conditional probability and conditional probability distribution",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "The probability of an occurance happening when another occurance has already been witnessed.\nIn other words, the probability for a random variable or variables getting a value when one ore the value of one or more random variables is already known. \n\nThe conditional distribution shows the probabilities or joint probabilities for random variables, that are not yet known based on known conditions i.e. the known values for other random variables.",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "probability",
+                "statistics",
+                "distributions"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "69": {
+            "prob_id": 69,
+            "pat_1": {
+                "content": "list installed packages in dnf that have 'ana' in the beginning of the name (-> command)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "dnf list installed \"ana*\"",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "dnf",
+                "linux"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
+        },
+        "70": {
+            "prob_id": 70,
+            "pat_1": {
+                "content": "dnf list installed \"ana*\"",
+                "pat_type": null,
+                "media": "text"
+            },
+            "pat_2": {
+                "content": "list installed packages in dnf that have 'ana' in the beginning of the name (-> command)",
+                "pat_type": null,
+                "media": "text"
+            },
+            "topics": [
+                "dnf",
+                "linux"
+            ],
+            "mast_lvl": 0,
+            "ratings": [],
+            "answ_hist": [],
+            "time_answ_cor": null
         }
     }
 }
