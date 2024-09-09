@@ -8,7 +8,6 @@ import datetime
 
 from problem import Problem
 from pattern import Pattern
-import utils
 
 class Maria():
 
@@ -70,7 +69,12 @@ or type "help" for more information''')
                     self.delete_problem(command[2]) #id to be deleted 
 
                 case 'E' | 'EDIT':
-                    self.edit_problem(command[2]) #id of the to be edited problem
+
+                    #if problem sections were given:
+                    if len(command) > 3:
+                        self.edit_problem(int(command[2]), command[3:])
+                    else:
+                        self.edit_problem(int(command[2])) #id of the to be edited problem
 
                 case 'I' | 'INFO':
                     if len(command) == 2: #no problem id given
@@ -118,7 +122,7 @@ or type "help" for more information''')
                 return #leave funciton without saving the new pattern
             elif any(word for word in usr_input.upper().split() if word\
                     in ['%E', '%EDIT', '%EDITOR']):
-                usr_input = utils.open_editor(text_data=f'#{instructions[key]}') 
+                usr_input = self.UI.open_editor(text_data=f'#{instructions[key]}\n') 
                 usr_input = usr_input.replace(f'#{instructions[key]}', '').strip()
                 print(usr_input)
 
@@ -177,7 +181,7 @@ moment. Good job!')
         answ = self.UI.ask_input("Give your answer or hit 'enter'.")
         #check if user wants to use editor:
         if answ.strip().upper() in ['%E', '%EDIT', '%EDITOR']:
-            answ = utils.open_editor(text_data=f'**{problem_prompt}**').replace(\
+            answ = self.UI.open_editor(text_data=f'**{problem_prompt}**').replace(\
                     f'**{problem_prompt}**', '')
             print(answ)
         self.UI.provide_output(f'Here is the matching pattern:\n\n {prob.pat_2.content}\n')
@@ -204,11 +208,39 @@ moment. Good job!')
                 self.UI.provide_output(f"Failed to delete problem with\
 given id ({prob_id}). Id doesn't exist. ")
 
-    #updates an excisting problem
-    def edit_problem(self, prob_id):
-        self.UI.provide_output('Edit does not exist yet') 
     
-    #add new topic groups to the active_topic_groups:
+    #updates an excisting problem, 
+    def edit_problem(self, prob_id, sections = ['P1', 'P2', 'TOPICS']):
+        #uppercase the problems sections:
+        sections = [section.upper() for section in sections]
+        #get the problem matching the id:
+        problem = self.collection.get_problem_by_id(prob_id)
+        #if problem does not exist:
+        if not problem:
+            self.UI.provide_output(f'Could not find a problem with given id')
+            return
+
+        #edit chosen sections
+        for section in sections:
+            match section:
+                case 'P1' : 
+                    problem.pat_1.content = self.UI.open_editor(text_data =\
+                            problem.pat_1.content)
+                case 'P2' :
+                    problem.pat_2.content = self.UI.open_editor(text_data =\
+                            problem.pat_2.content)
+                case 'TOPICS' :  problem.topics = self.UI.open_editor\
+                        (text_data=' '.join(problem.topics)).split()
+                case _ : 
+                    self.UI.provide_output(f'{section} is not a proper\
+ argument. Discarding all edits.')
+                    return False
+
+        #replace the original problem with the edited one
+        self.collection.replace_problem(problem)
+        self.UI.provide_output(f'Problem {prob_id} successfully edited.')
+    
+    #add new topic groups to the active_topic_gr{oups:
     def add_topic_groups(topic_groups):
         pass
 

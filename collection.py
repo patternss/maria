@@ -104,7 +104,13 @@ class Collection():
     def replace_problem(self, problem):
         self.problems[problem.prob_id] = problem
     
-    #returns all problems from the given topic groups
+    def get_problem_by_id(self, prob_id):
+        print(f'problem id: {prob_id}')
+        if prob_id in self.problems:
+            return copy.deepcopy(self.problems[prob_id])
+        else: return False
+    
+    #returns all problems from the given topic groups selecting with select func
     def get_problems(self, topic_groups, selection_func):
         matching_problems = []
 
@@ -127,10 +133,10 @@ class Collection():
     
     #remove a problem from the collection
     def delete_problem(self, prob_id):
-        try:
+        if prob_id in self.problems:
             del self.problems[prob_id]
             return True
-        except KeyError: 
+        else:
             return False
 
     #updates prominance values for problems given in parameters.
