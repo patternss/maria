@@ -122,7 +122,8 @@ or type "help" for more information''')
                 return #leave funciton without saving the new pattern
             elif any(word for word in usr_input.upper().split() if word\
                     in ['%E', '%EDIT', '%EDITOR']):
-                usr_input = self.UI.open_editor(text_data=f'#{instructions[key]}\n') 
+                usr_input = self.UI.open_editor(text_data=f'#{instructions[key]}\n\
+{usr_input.replace("%e", "")}') 
                 usr_input = usr_input.replace(f'#{instructions[key]}', '').strip()
                 print(usr_input)
 
@@ -137,9 +138,14 @@ or type "help" for more information''')
         pat_2 = Pattern(inputs['pat_2'])
         topics = inputs['topics'].split()
 
-        self.collection.add_problem(topics, pat_1, pat_2)
+        prob_id = self.collection.add_problem(topics, pat_1, pat_2)
+        if prob_id != None:
+            self.UI.provide_output(f'Problem {prob_id} succesfully created.')
         if inputs['two_way'].upper() in ['Y', 'YES']:
-            self.collection.add_problem(topics, pat_2, pat_1)
+            prob_id = self.collection.add_problem(topics, pat_2, pat_1)
+            if prob_id != None:
+                self.UI.provide_output(f'Problem {prob_id} succesfully created.')
+
         
     #provides a problem to chosen client by fetching new problems if the
     #there are no active problems. defines a prob_filter function that 
@@ -189,7 +195,7 @@ moment. Good job!')
         #ask for problem rating
         rating = None
         while rating not in ['C','I']:
-            rating = self.UI.ask_input("How did it go? rate the problem - C for correct and I for incorrect").upper()
+            rating = self.UI.ask_input("How did it go? rate the answer - c for correct and i for incorrect").upper()
             if rating == 'C':
                 prob.ratings.append(1)
                 prob.time_answ_cor = datetime.datetime.now()

@@ -91,6 +91,7 @@ class Collection():
         #save collection:
         self.save_collection(self.name)
 
+    #returns the newly created problem's id if successful
     def add_problem(self, topics, pat_1, pat_2,  prob_id=None, mastery_lvl=0,\
             ratings=[], answ_hist=[], time_answ_cor=None):
         if prob_id == None:
@@ -100,9 +101,12 @@ class Collection():
                 ratings, answ_hist, time_answ_cor)
 
         self.problems[prob_id] = new_prob
+        self.save_collection(self.name) #save changes
+        return prob_id
     
     def replace_problem(self, problem):
         self.problems[problem.prob_id] = problem
+        self.save_collection(self.name) #save changes 
     
     def get_problem_by_id(self, prob_id):
         print(f'problem id: {prob_id}')
@@ -135,9 +139,11 @@ class Collection():
     def delete_problem(self, prob_id):
         if prob_id in self.problems:
             del self.problems[prob_id]
+            self.save_collection(self.name) #save changes
             return True
         else:
             return False
+        
 
     #updates prominance values for problems given in parameters.
     def update_prominances(self, problems = None):

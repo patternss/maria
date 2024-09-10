@@ -4,16 +4,17 @@
 import tempfile
 import os
 import subprocess
+from colorama import Fore, Style
 
 class CLI():
     def __init__(self ):
         pass
 
     def ask_input(self, message):
-        return input('- ' + message + '\n>>>')
+        return input(Fore.CYAN + Style.BRIGHT + '- ' + message + Style.RESET_ALL + '\n>>>')
 
     def provide_output(self, message):
-        print('- ' + message)
+        print(Fore.CYAN + Style.BRIGHT + '- ' + message + Style.RESET_ALL)
 
 
     #a function that let's the user eidit something 
