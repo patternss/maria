@@ -61,6 +61,7 @@ class Collection():
             try:
                 col_dict = json.load(json_file)
                 self.name = col_name
+                #load the problems:
                 for prob_id, data in col_dict['problems'].items():
                     self.add_problem(data["topics"], Pattern(**data["pat_1"]),\
                             Pattern(**data["pat_2"]), data["prob_id"],\
@@ -93,7 +94,7 @@ class Collection():
 
     #returns the newly created problem's id if successful
     def add_problem(self, topics, pat_1, pat_2,  prob_id=None, mastery_lvl=0,\
-            ratings=[], answ_hist=[], time_answ_cor=None):
+            ratings=[], answ_hist=[], time_answ_cor=None, save=False):
         if prob_id == None:
             self.top_id += 1
             prob_id = self.top_id
@@ -101,7 +102,8 @@ class Collection():
                 ratings, answ_hist, time_answ_cor)
 
         self.problems[prob_id] = new_prob
-        self.save_collection(self.name) #save changes
+        if save:
+            self.save_collection(self.name) #save changes
         return prob_id
     
     def replace_problem(self, problem):
@@ -118,14 +120,15 @@ class Collection():
     def get_problems(self, topic_groups, selection_func):
         matching_problems = []
 
-        self.update_prominances()
+        self.update_prominences()
 
-        problems = self.problems
         #if all topics are included
         if not topic_groups:
             return copy.deepcopy(selection_func(self.problems))
 
-        #when topic groups are set:
+        #when topic groups are set: !THIS IS NOT TESTED AND PROBABLY NOT WORKING
+        #FOR EXAMPLE returns .items() but should be problems? remove or fix if 
+        #decide to use topic groups
         for problem in self.problems: #!!!efficiency?!!!
             for group in topic_groups:
                 #all the group's topics are found in the problems topics
@@ -145,15 +148,15 @@ class Collection():
             return False
         
 
-    #updates prominance values for problems given in parameters.
-    def update_prominances(self, problems = None):
+    #updates prominence values for problems given in parameters.
+    def update_prominences(self, problems = None):
         if problems == None:
             problems = self.problems
         #!!!More efficient way for updating later
             # -update higher mastered levels less frequently 
 
         for problem in problems.values():
-            problem.calc_prominance()
+            problem.calc_prominence()
 
     #returns each topic and number of problems in them
     def get_topics(self):
@@ -166,16 +169,24 @@ class Collection():
     #returns information about a problem or all the problems if argument
     #is not provided
     def get_problem_info(self, prob_id = None):
-        self.update_prominances() 
+        self.update_prominences() 
 
         probs = self.problems
         #if a problem id was provided:
         if prob_id != None:
-            #!!!!TRY IF IT CAN BE FOUND
-            probs = {prob_id : self.problems[prob_id]}
+            if prob_id in probs:
+                probs = {prob_id : self.problems[prob_id]}
+            else:
+                return False
 
         prob_info = []
+        
         for prob in probs.values():
-            prob_info.append(f'''problem id: {prob.prob_id} - promenance:\
- {prob.prominance} - mastery: {prob.mast_lvl}''')
+            prob_info.append(f'''problem id: {prob.prob_id} - prominence:\
+ {prob.prominence} - mastery: {prob.mast_lvl}''')
+        #add number of active problems:
+        prob_info.append(f'\n- Number of active problems:\
+ {len([1 for prob in probs.values() if prob.prominence > 1.15 ])}')
+        prob_info.append(f'\n- The highest current prominence is {\
+                max(probs.values(), key=lambda prob:prob.prominence).prominence}\n')
         return prob_info
