@@ -4,6 +4,7 @@
 import tempfile
 import os
 import subprocess
+#for color printing
 from colorama import Fore, Style
 
 class CLI():
@@ -13,8 +14,11 @@ class CLI():
     def ask_input(self, message):
         return input(Fore.CYAN + Style.BRIGHT + '- ' + message + Style.RESET_ALL + '\n>>>')
 
-    def provide_output(self, message):
-        print(Fore.CYAN + Style.BRIGHT + '- ' + message + Style.RESET_ALL)
+    def provide_output(self, message, source='maria'):
+        if source == 'maria':
+            message = Fore.CYAN + Style.BRIGHT + '- ' + message + Style.RESET_ALL 
+        print(message)
+        
 
 
     #a function that let's the user eidit something 

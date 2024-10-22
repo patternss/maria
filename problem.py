@@ -14,7 +14,7 @@ from pattern import Pattern
 
 class Problem():
     def __init__(self, prob_id, topics, pat_1, pat_2, mast_lvl=0,\
-            ratings=[], answ_hist=[], time_answ_cor=None):
+            ratings=[], answ_hist=[], time_answ_cor=None, lock = None):
         self.prob_id = prob_id 
         self.pat_1 = pat_1
         self.pat_2 = pat_2
@@ -23,6 +23,7 @@ class Problem():
         self.ratings = ratings
         self.answ_hist = answ_hist
         self.time_answ_cor = time_answ_cor 
+        self.lock = lock
         self.MAX_PROMINENCE = 100000
         self.prominence = self.MAX_PROMINENCE
         self.total_mastery = False
@@ -50,7 +51,10 @@ class Problem():
     def calc_mast_lvl(self):
         #if there are {correct} answers and the last {correct} were right: 
         correct = 3 #number of consecutive correct answers before lvl up
-        if len(self.ratings) >= correct and 0 not in self.ratings[-correct:]: 
+        if len(self.ratings) >= correct and 0 not in self.ratings[-correct:]:
+            #if mastery progression is locked and lock level has been reached
+            if self.lock != None and self.lock == self.mast_lvl:
+                return
             self.mast_lvl += 1
             #if problem has been complitely mastered
             if self.mast_lvl > 7:

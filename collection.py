@@ -42,7 +42,8 @@ class Collection():
                 "ratings" : problem.ratings,
                 "answ_hist" : problem.answ_hist,
                 "time_answ_cor" : problem.time_answ_cor.isoformat() if \
-                        problem.time_answ_cor else None
+                        problem.time_answ_cor else None,
+                "lock" : None if problem.lock == None else int(problem.lock)  
                 }
 
     #turns the collection object's properties into a dictionary
@@ -67,7 +68,7 @@ class Collection():
                             Pattern(**data["pat_2"]), data["prob_id"],\
                             data["mast_lvl"], data["ratings"], data["answ_hist"],\
                             datetime.datetime.fromisoformat(data["time_answ_cor"]) if \
-                                data["time_answ_cor"] != None else None)
+                                data["time_answ_cor"] != None else None, data["lock"])
                     id_counter = data["prob_id"]
                 self.top_id = id_counter #update to highest id
             except Exception as e: 
@@ -94,12 +95,12 @@ class Collection():
 
     #returns the newly created problem's id if successful
     def add_problem(self, topics, pat_1, pat_2,  prob_id=None, mastery_lvl=0,\
-            ratings=[], answ_hist=[], time_answ_cor=None, save=False):
+            ratings=[], answ_hist=[], time_answ_cor=None, lock=None, save=False):
         if prob_id == None:
             self.top_id += 1
             prob_id = self.top_id
         new_prob = Problem(prob_id, topics, pat_1, pat_2, mastery_lvl,\
-                ratings, answ_hist, time_answ_cor)
+                ratings, answ_hist, time_answ_cor, lock)
 
         self.problems[prob_id] = new_prob
         if save:
@@ -182,8 +183,8 @@ class Collection():
         prob_info = []
         
         for prob in probs.values():
-            prob_info.append(f'''problem id: {prob.prob_id} - prominence:\
- {prob.prominence} - mastery: {prob.mast_lvl}''')
+            prob_info.append(f'''id: {prob.prob_id} - prominence:\
+{prob.prominence} - mastery: {prob.mast_lvl} - lock: {prob.lock}''')
         #add number of active problems:
         prob_info.append(f'\n- Number of active problems:\
  {len([1 for prob in probs.values() if prob.prominence > 1.15 ])}')

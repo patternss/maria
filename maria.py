@@ -33,13 +33,13 @@ class Maria():
         while True:
             command = self.UI.ask_input('What do you want to do next?').split()
 
-            if command[0] not in self.commands.keys():
+            if not command or command[0] not in self.commands.keys():
                 self.UI.provide_output('''Incorrect input, please try again \
 or type "help" for more information''')
 
             else:
                 self.commands[command[0]](command)
-            if command[0] in ['quit', 'q']:
+            if command and command[0] in ['quit', 'q']:
                 #save currently used collection to database
                 self.collection.close_collection()
                 break
@@ -90,6 +90,9 @@ or type "help" for more information''')
 
                     for piece in prob_info:
                         self.UI.provide_output(piece)
+
+                case 'L' | 'LOCK':
+                    self.lvl_lock(command)
 
                 case _ :
                     self.UI.provide_output('Unknown argument for command "create".')
@@ -207,7 +210,7 @@ moment. Good job!')
         #ask for answer rating
         rating = None
         while rating not in ['C','I']:
-            rating = self.UI.ask_input("How did it go? rate the answer - c for correct and i for incorrect").upper()
+            rating = self.UI.ask_input("How did it go? rate the answer - c for correct and i for incorrect").strip().upper()
             if rating == 'C':
                 prob.ratings.append(1)
                 prob.time_answ_cor = datetime.datetime.now()
@@ -264,6 +267,38 @@ given id ({prob_id}). Id doesn't exist. ")
         self.collection.replace_problem(problem)
         self.UI.provide_output(f'Problem {prob_id} successfully edited.')
     
+    #set or remove a masterly level lock for a problem:
+    def lvl_lock(self, command):
+        if len(command) < 4:
+            self.UI.provide_output('Not enough arguments. Problem Id and lock level \
+or remove (r) arguments needed')
+            return False
+
+        #get the problem matching the id:
+        if command[2].isnumeric():
+            prob_id = int(command[2])
+            problem = self.collection.get_problem_by_id(prob_id)
+            #if problem does not exist:
+            if not problem:
+                self.UI.provide_output(f'Could not find a problem with given id')
+                return False
+        else:
+            self.UI.provide_output('Id needs to be a positive number')
+            return False
+
+        #set the new lock level
+        if command[3].isnumeric(): #!THIS STILL ALLOWS NEGATIVE NUMBERS AND > MAX LVL
+            problem.lock = command[3]
+        elif command[3].upper() in ['R', 'REMOVE']:
+            problem.lock = None
+        else:
+            self.UI.provide_output(f'Incorrect level lock argument: {command[3]}')
+            return False
+
+        #replace the original problem with the edited one
+        self.collection.replace_problem(problem)
+        self.UI.provide_output(f'Problem {prob_id} locked to level {problem.lock}')
+
     #update the topic prominences
     def update_topic_proms(self, prob, decay=0.7):
         #aply decay to all existing act topics:
